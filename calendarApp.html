@@ -1,0 +1,77 @@
+<head>
+    <title>calendarApp</title>
+</head>
+
+<body>
+
+{{> main}}
+
+
+
+</body>
+
+<template name="main">
+
+    {{>dialog}}
+
+    <div class="container">
+
+    </div>"
+
+    <div class="container">
+        <div class="panel" id="divTags" style="column-span: 10">
+            <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>:
+        </div>
+
+        <div class="panel">
+            <div class="panel-body">
+                {{>loginButtons}}
+
+                <input type="button" class="btn btn-success" id="btnShare" value="Share" onclick="$('#divShare').modal('show');"
+                       data-toggle="tooltip" data-original-title="Default tooltip">
+                <a href="#" data-toggle="tooltip" data-original-title="Default tooltip">Test Tooltip</a>
+
+                <button type="button" class="btn btn-default" aria-label="Left Align" onclick="alert('show menu');">
+                    <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
+                </button>
+
+
+            </div>
+        </div>
+
+
+
+        <h3>Our Calendar Application</h3>
+
+        <div id="calendar" >
+
+        </div>
+
+
+    </div>
+
+</template>
+
+<template name="dialog">
+    <div id="divShare" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Share this task....</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" name="txtshsarewithuser" id="txtshsarewithuser" class="form-control" value="" title="" required="required" placeholder="share task with" >
+                    <p class="small"> The shared item will be visible in business notebooks</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Share</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</template>
